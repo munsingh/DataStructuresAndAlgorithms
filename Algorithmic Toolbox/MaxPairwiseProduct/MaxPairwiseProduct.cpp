@@ -2,12 +2,12 @@
 #include <vector>
 #include <algorithm>
 
-int MaxProduct(int n, const std::vector< int >& vecNumbers) {
-	int nMaxProduct = 1;
+long long MaxProduct(const std::vector< int >& vecNumbers) {
+	long long nMaxProduct = 1;
 
 	for (size_t i = 0; i < vecNumbers.size(); ++i) {
 		for (size_t j = i + 1; j < vecNumbers.size(); ++j) {
-			nMaxProduct = std::max(nMaxProduct, vecNumbers[i] * vecNumbers[j]);
+			nMaxProduct = std::max(nMaxProduct, static_cast< long long >( vecNumbers[i] ) * vecNumbers[j]);
 		}
 	}
 
@@ -23,7 +23,7 @@ int main( int nArgc, char** pArgv ){
 		std::cin >> vecNumbers[ i ] ;
 	}
 	
-	std::cout << MaxProduct(nNumberOfIntegers, vecNumbers);
+	std::cout << MaxProduct( vecNumbers);
 
 	return 0;
 }

@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstdlib>
+#include <time.h>
 
 /*
 This function we will find the two biggest number and calculate their sum.
@@ -41,8 +43,9 @@ long long MaxProduct(const std::vector< int >& vecNumbers) {
 	return nMaxProduct;
 }
 
-int main( int nArgc, char** pArgv ){
-	int nNumberOfIntegers = 0;
+int main( int nArgc, char** pArgv ) {
+
+	/*int nNumberOfIntegers = 0;
 	std::cin >> nNumberOfIntegers;
 
 	std::vector< int > vecNumbers( nNumberOfIntegers );
@@ -50,7 +53,39 @@ int main( int nArgc, char** pArgv ){
 		std::cin >> vecNumbers[ i ] ;
 	}
 	
-	std::cout << MaxProductFast( vecNumbers);
+	std::cout << MaxProductFast( vecNumbers);*/
+
+	//we generate random numbers and test it using both slow and fast
+	srand(time(0));
+	while (true) {
+		
+		int nNumberOfIntegers = rand() % 10 + 2;
+		std::cout << nNumberOfIntegers << '\n';
+
+		std::vector< int > vecNumbers;
+
+		for (int i = 0; i < nNumberOfIntegers; ++i) {
+			int nRandom = rand();
+			vecNumbers.push_back(nRandom % 100000);
+
+		}
+
+		for (int i = 0; i < nNumberOfIntegers; ++i) {
+			std::cout << vecNumbers[i] << " ";
+		}
+
+		std::cout << std::endl;
+
+		long long lResult1 = MaxProduct(vecNumbers);
+		long long lResult2 = MaxProductFast(vecNumbers);
+		if (lResult1 != lResult2) {
+			std::cout << "Wrong answer " << lResult1 << " " << lResult2 << std::endl;
+			break;
+		}
+		else {
+			std::cout << "Correct" << '\n';
+		}
+	}
 
 	return 0;
 }

@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "APlusB", "Algorithmic Toolb
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaxPairwiseProduct", "Algorithmic Toolbox\MaxPairwiseProduct\MaxPairwiseProduct.vcxproj", "{2BA43BCE-2023-4DFE-83E6-C4D7AB4C1A3F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibanacci", "Fibanacci\Fibanacci.vcxproj", "{75D39603-6BD7-4E89-A920-A1F5CA1E5393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -33,6 +35,14 @@ Global
 		{2BA43BCE-2023-4DFE-83E6-C4D7AB4C1A3F}.Release|x64.Build.0 = Release|x64
 		{2BA43BCE-2023-4DFE-83E6-C4D7AB4C1A3F}.Release|x86.ActiveCfg = Release|Win32
 		{2BA43BCE-2023-4DFE-83E6-C4D7AB4C1A3F}.Release|x86.Build.0 = Release|Win32
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Debug|x64.ActiveCfg = Debug|x64
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Debug|x64.Build.0 = Debug|x64
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Debug|x86.ActiveCfg = Debug|Win32
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Debug|x86.Build.0 = Debug|Win32
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Release|x64.ActiveCfg = Release|x64
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Release|x64.Build.0 = Release|x64
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Release|x86.ActiveCfg = Release|Win32
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BDEEF914-7554-4090-93F3-8029E51A322A} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 		{2BA43BCE-2023-4DFE-83E6-C4D7AB4C1A3F} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
+		{75D39603-6BD7-4E89-A920-A1F5CA1E5393} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

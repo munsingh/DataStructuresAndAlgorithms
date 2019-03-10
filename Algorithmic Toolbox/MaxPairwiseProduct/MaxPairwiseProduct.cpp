@@ -45,7 +45,7 @@ long long MaxProduct(const std::vector< int >& vecNumbers) {
 
 int main( int nArgc, char** pArgv ) {
 
-	/*int nNumberOfIntegers = 0;
+	int nNumberOfIntegers = 0;
 	std::cin >> nNumberOfIntegers;
 
 	std::vector< int > vecNumbers( nNumberOfIntegers );
@@ -53,10 +53,10 @@ int main( int nArgc, char** pArgv ) {
 		std::cin >> vecNumbers[ i ] ;
 	}
 	
-	std::cout << MaxProductFast( vecNumbers);*/
+	std::cout << MaxProductFast( vecNumbers);
 
 	//we generate random numbers and test it using both slow and fast
-	srand(time(0));
+	/*srand(time(0));
 	while (true) {
 		
 		int nNumberOfIntegers = rand() % 10 + 2;
@@ -85,7 +85,7 @@ int main( int nArgc, char** pArgv ) {
 		else {
 			std::cout << "Correct" << '\n';
 		}
-	}
+	}*/
 
 	return 0;
 }

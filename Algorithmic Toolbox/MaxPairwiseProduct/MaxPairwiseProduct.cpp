@@ -22,18 +22,17 @@ long long MaxProductFast(const std::vector< int >& vecNumbers) {
 	//and it is 2ndlargest if it is less than the largest
 	int nMaxIndex2 = -1;
 	for (size_t i = 0; i < vecNumbers.size(); ++i) {
-		if ( i != nMaxIndex && ( nMaxIndex2 == -1 || vecNumbers[i] > vecNumbers[nMaxIndex2] )) {
+		if ( vecNumbers[i] != vecNumbers[nMaxIndex] && ( nMaxIndex2 == -1 || vecNumbers[i] > vecNumbers[nMaxIndex2] )) {
 			nMaxIndex2 = i;
 		}
 	}
 
-	/*std::cout << "Index 1: " << nMaxIndex << " Index 2: " << nMaxIndex2 << "\n";*/
 	return static_cast< long long >(vecNumbers[nMaxIndex]) * vecNumbers[nMaxIndex2];
 }
 
 //This function is slow and will work in O(n^2)
 long long MaxProduct(const std::vector< int >& vecNumbers) {
-	long long nMaxProduct = 0;
+	long long nMaxProduct = 1;
 
 	for (size_t i = 0; i < vecNumbers.size(); ++i) {
 		for (size_t j = i + 1; j < vecNumbers.size(); ++j) {
@@ -46,7 +45,7 @@ long long MaxProduct(const std::vector< int >& vecNumbers) {
 
 int main( int nArgc, char** pArgv ) {
 
-	int nNumberOfIntegers = 0;
+	/*int nNumberOfIntegers = 0;
 	std::cin >> nNumberOfIntegers;
 
 	std::vector< int > vecNumbers( nNumberOfIntegers );
@@ -54,10 +53,10 @@ int main( int nArgc, char** pArgv ) {
 		std::cin >> vecNumbers[ i ] ;
 	}
 	
-	std::cout << MaxProductFast( vecNumbers);
+	std::cout << MaxProductFast( vecNumbers);*/
 
 	//we generate random numbers and test it using both slow and fast
-	/*srand(time(0));
+	srand(time(0));
 	while (true) {
 		
 		int nNumberOfIntegers = rand() % 10 + 2;
@@ -86,7 +85,7 @@ int main( int nArgc, char** pArgv ) {
 		else {
 			std::cout << "Correct" << '\n';
 		}
-	}*/
+	}
 
 	return 0;
 }

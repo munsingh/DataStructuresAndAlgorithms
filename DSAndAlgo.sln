@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCM", "Algorithmic Toolbox\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FibonacciHuge", "Algorithmic Toolbox\FibonacciHuge\FibonacciHuge.vcxproj", "{3E2441F9-46F1-4927-9472-958339D9F072}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LargestNumber", "Algorithmic Toolbox\LargestNumber\LargestNumber.vcxproj", "{73B0469E-42D7-4926-BA52-3F1BD5E1C174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -83,6 +85,14 @@ Global
 		{3E2441F9-46F1-4927-9472-958339D9F072}.Release|x64.Build.0 = Release|x64
 		{3E2441F9-46F1-4927-9472-958339D9F072}.Release|x86.ActiveCfg = Release|Win32
 		{3E2441F9-46F1-4927-9472-958339D9F072}.Release|x86.Build.0 = Release|Win32
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Debug|x64.ActiveCfg = Debug|x64
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Debug|x64.Build.0 = Debug|x64
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Debug|x86.ActiveCfg = Debug|Win32
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Debug|x86.Build.0 = Debug|Win32
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Release|x64.ActiveCfg = Release|x64
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Release|x64.Build.0 = Release|x64
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Release|x86.ActiveCfg = Release|Win32
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +105,7 @@ Global
 		{72C99E43-4A72-4C3C-BDC4-D96CEBBFFEE5} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 		{AA7E3332-97E8-400F-9347-4CEAE547B0D6} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 		{3E2441F9-46F1-4927-9472-958339D9F072} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
+		{73B0469E-42D7-4926-BA52-3F1BD5E1C174} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

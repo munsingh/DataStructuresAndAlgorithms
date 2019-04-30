@@ -135,16 +135,16 @@ template <class T> void List<T>::ClearList() {
 }
 
 
-long long max_dot_product(List<int>& oProfitList, List<int>& oAverageClicksList) {
+long long max_dot_product(List<long long>& oProfitList, List<long long>& oAverageClicksList) {
 	long long llResult = 0;
 	
 	//for maximum revenue
 	//we sum the product of head of both the lists
-	Node<int>* pProfitHead = oProfitList.GetHead();
-	Node<int>* pAverageClicksHead = oAverageClicksList.GetHead();
+	Node<long long>* pProfitHead = oProfitList.GetHead();
+	Node<long long>* pAverageClicksHead = oAverageClicksList.GetHead();
 
 	while (pProfitHead) {
-		llResult += static_cast< long long>(pProfitHead->GetData() * pAverageClicksHead->GetData());
+		llResult += (pProfitHead->GetData() * pAverageClicksHead->GetData());
 		pProfitHead = oProfitList.DeleteHead();
 		pAverageClicksHead = oAverageClicksList.DeleteHead();
 	}
@@ -156,7 +156,7 @@ int main() {
 	size_t nNumberOfAds;		//Get the number of ads
 	std::cin >> nNumberOfAds;
 	
-	List< int > oProfitList, oAverageClicksList;
+	List< long long > oProfitList, oAverageClicksList;
 
 	for (size_t i = 0; i < nNumberOfAds; i++)
 		std::cin >> oProfitList;

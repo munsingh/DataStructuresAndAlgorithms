@@ -9,33 +9,22 @@
  Once out of the loop, move the the rest of the left and right to the end.
  the temp array is the new array, which has to be worked upon.
 */
-template <class T > void Merge(std::vector<T>& vecList, size_t nLeft, size_t nMid, size_t nRight) {
-	size_t nLeftSize = nMid - nLeft + 1;
-	size_t nRightSize = nRight - nMid;
+template <class T > void Merge(std::vector<T>& vecList, std::vector<T>& vecLeft, std::vector<T>& vecRight) {
+	size_t nLeftSize = vecLeft.size();
+	size_t nRightSize = vecRight.size();
+	size_t nListSize = vecList.size();
 
+	size_t i = 0, j = 0, k = 0;
+	
 	//create two vectors for left and right
-	std::vector<T> vecLeft(nLeftSize);
-	std::vector<T> vecRight(nRightSize);
-
-	//Populate vecLeft and vecRight
-	for (size_t i = 0; i < nLeftSize; ++i) {
-		vecLeft[i] = vecList[nLeft + i];
-	}
-
-	for (size_t i = 0; i < nRightSize; ++i) {
-		vecRight[i] = vecList[nMid + i];
-	}
-
 	//how we iterate the two temp arrays until they are empty
-	size_t i = 0, j = 0, k = nLeft;
-	while (i < nLeftSize && j << nRightSize) {
+	while (i < nLeftSize && j < nRightSize) {
 		if (vecLeft[i] < vecRight[j]) {
-			vecList[k] = vecLeft[i++];
+			vecList[k++] = vecLeft[i++];
 		}
 		else {
-			vecList[k] = vecRight[j++];
+			vecList[k++] = vecRight[j++];
 		}
-		++k;
 	}
 
 	//Copy the remaining of left and right to the actual vector
@@ -48,15 +37,30 @@ template <class T > void Merge(std::vector<T>& vecList, size_t nLeft, size_t nMi
 	}
 }
 
-template <class T> void MergeSort(std::vector<T>& vecList, size_t nLeft, size_t nRight) {
+template <class T> void MergeSort(std::vector<T>& vecList) {
 	//find the mid node
+	size_t nLength = vecList.size();
 	
-	if (nLeft < nRight) {
-		size_t nMid = (nLeft + nRight) / 2;
+	if (nLength < 2) {
+		return;
+	}
+	else {
+		size_t nMid = nLength / 2;
+		std::vector<T> vecLeft(nMid);
+		std::vector<T> vecRight(nLength - nMid);
 
-		MergeSort(vecList, nLeft, nMid);
-		MergeSort(vecList, nMid + 1, nRight);
-		Merge(vecList, nLeft, nMid, nRight);
+		size_t k = 0;
+		for (size_t i = 0; i < nMid; ++i) {
+			vecLeft[i] = vecList[k++];
+		}
+
+		for (size_t i = 0; i < nLength - nMid; ++i) {
+			vecRight[i] = vecList[k++];
+		}
+
+		MergeSort(vecLeft);
+		MergeSort(vecRight);
+		Merge(vecList, vecLeft, vecRight);
 	}
 }
 
@@ -73,7 +77,7 @@ int main(int nArgc, char** pArgv) {
 		std::cin >> vecList[i];
 	}
 
-	MergeSort(vecList, 0, vecList.size());
+	MergeSort(vecList);
 	for (int i = 0; i < nNumberOfElements; ++i) {
 		std::cout << vecList[i] << " ";
 	}

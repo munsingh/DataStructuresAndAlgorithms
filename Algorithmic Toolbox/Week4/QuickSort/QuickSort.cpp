@@ -5,6 +5,14 @@
 
 template <class T> int Partition(std::vector<T>& vecList, int nLeft, int nRight) {
 	//Here we move the pivot to its final location
+	//The pivot is the element at the left position
+	//the Initial parition is the position next to the left
+	//Start a loop from left +1 till the end i.e. right (insclusive)
+	//If the pivot is greater than the element
+	//then swap the elements at the partition and the current position
+	//Move the parition to the next element.
+	//Once the loop is done
+	//Swap the element before the partition with the left one.
 	T nPivot = vecList[nLeft];
 	int nPartition = nLeft + 1;
 	for (int i = nLeft + 1; i <= nRight; ++i) {

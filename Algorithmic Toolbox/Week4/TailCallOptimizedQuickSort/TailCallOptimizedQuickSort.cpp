@@ -4,34 +4,35 @@
 #include <iostream>
 #include <time.h>
 
-template <class T> void Partition(std::vector<T>& vecList, int nLeft, int nRight, int nPartition1, int nPartition2) {
-	T	nPivot = vecList[nLeft];
-	int nPartition1 = nLeft + 1;
-	int nPartition2 = nRight;
-	int i = nLeft + 1;
+template <class T> int Partition(std::vector<T>& vecList, int nLeft, int nRight) {
+	T nPivot = vecList[nLeft];
+	int nPartition = nLeft + 1;
 
-	while (i <= nRight) {
+	for (int i = nLeft + 1; i <= nRight; ++i) {
 		if (nPivot > vecList[i]) {
-			std::swap(vecList[i++], vecList[nPartition1++]);
-		}
-		else if (nPivot < vecList[i]) {
-			std::swap(vecList[i], vecList[nPartition2--])
-		}
-		else {
-			//nPivot == vecList[i];
-			i++
+			std::swap(vecList[nPartition], vecList[i]);
+			nPartition++;
 		}
 	}
-
-	//find the minimum
-	int nMinimum = std::min(nPartition2 - nPartition1, nRight - nPartition2 + 1);
-	for (int i = 0; i < nMinimum; i++) {
-		std::swap(vecList[nPartition1 + 1], vecList[nRight - nMinimum + 1 + i]);
-	}
+	std::swap(vecList[nPartition - 1], vecList[nLeft]);
+	return nPartition - 1;
 }
 
 template <class T> void QuickSort(std::vector<T>& vecList, int nLeft, int nRight) {
+	while (nLeft < nRight) {
+		int nPartition = Partition(vecList, nLeft, nRight);
 
+		if (nPartition - nLeft < nRight - nPartition) {
+			//Sort the left part recursively and right part iteratively
+			QuickSort(vecList, nLeft, nPartition - 1);
+			nLeft = nPartition + 1;
+		}
+		else {
+			//Sort the right part recursively and left part iteratively
+			QuickSort(vecList, nPartition + 1, nRight);
+			nRight = nPartition - 1;
+		}
+	}
 }
 
 int main(int /*nArgv*/, char** /*pArgc*/) {
@@ -46,8 +47,9 @@ int main(int /*nArgv*/, char** /*pArgc*/) {
 	}
 
 	QuickSort(vecList, 0, nNumberOfElements - 1);
+
 	for (int i = 0; i < nNumberOfElements; ++i) {
-		std::cout << vecList[i];
+		std::cout << vecList[i] << " ";
 	}
 
 	return 0;

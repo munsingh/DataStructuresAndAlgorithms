@@ -6,31 +6,32 @@
 
 template <class T> void Partition(std::vector<T>& vecList, int nLeft, int nRight, int& nPartition1, int& nPartition2) {
 	//The values which are same as the pivot are between nPartition1 and nPartition2
-	T nPivot = vecList[nLeft];
-	nPartition1 = nLeft + 1;
-	nPartition2 = nRight;
+	//TO handle the 2 elements
+	if (nRight - nLeft < 2) {
+		if (vecList[nRight] < vecList[nLeft]) {
+			std::swap(vecList[nRight], vecList[nLeft]);
+		}
+		nPartition1 = nLeft;
+		nPartition2 = nRight;
+		return;
+	}
 
-	int i = nLeft + 1;
+	int i = nLeft;
+	int nPivot = vecList[nRight];
 	while (i <= nRight) {
 		if (nPivot > vecList[i]) {
-			std::swap(vecList[nPartition1], vecList[i]);
-			nPartition1++;
-			i++;
+			std::swap(vecList[nLeft++], vecList[i++]);
 		}
 		else if (nPivot < vecList[i]) {
-			std::swap(vecList[nPartition2], vecList[i]);
-			nPartition2--;
+			std::swap(vecList[i], vecList[nRight--]);
 		}
 		else {
-			//nPivot == vecList[i]
 			i++;
 		}
 	}
 
-	int nMinimum = std::min(nPartition2 - nPartition1, nRight - nPartition2 + 1);
-	for (int i = 0; i < nMinimum; i++) {
-		std::swap(vecList[nPartition1 + i], vecList[nRight - nMinimum + 1 + i]);
-	}
+	nPartition1 = nLeft - 1;
+	nPartition2 = i;
 }
 
 template <class T> void QuickSort(std::vector<T>& vecList, int nLeft, int nRight) {
@@ -45,8 +46,8 @@ template <class T> void QuickSort(std::vector<T>& vecList, int nLeft, int nRight
 
 	int nPartition1, nPartition2;
 	Partition(vecList, nLeft, nRight, nPartition1, nPartition2);
-	QuickSort(vecList, nLeft, nPartition1 - 1);
-	QuickSort(vecList, nPartition2 + 2, nRight);
+	QuickSort(vecList, nLeft, nPartition1);
+	QuickSort(vecList, nPartition2, nRight);
 }
 
 int main(int /*nArgv*/, char** /*pArgc*/) {

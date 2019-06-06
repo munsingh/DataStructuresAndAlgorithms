@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="OptimizedRandomizedQuickSort.cpp">
+    <ClCompile Include="TailCallOptimizedQuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

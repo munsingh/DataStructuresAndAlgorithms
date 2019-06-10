@@ -13,6 +13,11 @@ template <class T> int Count(std::vector<T>& vecList, T nNumber, int nLow, int n
 }
 
 template <class T> T MajorityElementDivideAndConquer(std::vector<T>& vecList, int nLow, int nHigh) {
+
+	if (nLow > nHigh) {
+		return -1;
+	}
+
 	if (nLow == nHigh) {
 		return vecList[nLow];
 	}
@@ -22,6 +27,42 @@ template <class T> T MajorityElementDivideAndConquer(std::vector<T>& vecList, in
 	int nLeft = MajorityElementDivideAndConquer(vecList, nLow, nMid);
 	int nRight = MajorityElementDivideAndConquer(vecList, nMid + 1, nHigh);
 
+	if (nLeft == -1 && nRight != -1) {
+		//Not there in the left but is there in the right side
+		int nRightCount = Count(vecList, nRight, nLow, nHigh);
+		if (nRightCount > (nHigh - nLow + 1) / 2) {
+			return nRight;
+		}
+		else
+			return -1;
+	}
+	else if (nLeft != -1 && nRight == -1) {
+		//there in right but not in left
+		int nLeftCount = Count(vecList, nLeft, nLow, nHigh);
+		if (nLeftCount > (nHigh - nLow + 1) / 2) {
+			return nLeft;
+		}
+		else
+			return -1;
+	}
+	else if (nLeft != -1 && nRight != -1) {
+		//present in both left and right
+		int nLeftCount = Count(vecList, nLeft, nLow, nHigh);
+		int nRightCount = Count(vecList, nRight, nLow, nHigh);;
+		if (nRightCount > (nHigh - nLow + 1) / 2) {
+			return nRight;
+		}
+		else if (nLeftCount > (nHigh - nLow + 1) / 2) {
+			return nLeft;
+		}
+		else
+			return -1;
+	}
+	else {
+		//not in both
+		return -1;
+	}
+
 	//if the two halves agree on the majority element, return it
 	if (nLeft == nRight) {
 		return nLeft;
@@ -30,6 +71,8 @@ template <class T> T MajorityElementDivideAndConquer(std::vector<T>& vecList, in
 	//otherwise, count each element and return the winner
 	int nLeftCount = Count(vecList, nLeft, nLow, nHigh);
 	int nRightCount = Count(vecList, nRight, nLow, nHigh);
+
+	
 
 	if (nLeftCount > nMid) {
 		return nLeft;

@@ -12,6 +12,54 @@ template <class T> int Count(std::vector<T>& vecList, T nNumber, int nLow, int n
 	return nCount;
 }
 
+/*
+	The Boyer–Moore majority vote algorithm is an algorithm for finding the majority of a sequence of 
+	elements using linear time and constant space. It is named after Robert S. Boyer and J Strother Moore, 
+	who published it in 1981,[1] and is a prototypical example of a streaming algorithm. 
+
+	This algorithm works in O(n) complexity. Basically iterate the array
+	and start with the 1st element, any time it is found again, increment the
+	count, if not found then decrement the count. When count becomes 0
+	then the majority element candidate is reset to the latest index
+	and the count is reset to 0
+
+	Once a candidate is identified, do a 2nd pass in O(n) and identify
+	if the candidate occures more than n/2 in the array.
+*/
+template <class T> T MajorityElementMooresVotingAlgorithm(std::vector<T>& vecList) {
+	size_t	nSize			= vecList.size();
+	size_t	nMajorityIndex	= 0;
+	int		nCount = 1;
+
+	for (size_t i = 0; i < nSize; i++) {
+		if (vecList[nMajorityIndex] == vecList[i]) {
+			nCount++;
+		}
+		else {
+			nCount--;
+		}
+
+		if (0 == nCount) {
+			//reset
+			nMajorityIndex = i;
+			nCount = 1;
+		}
+	}
+
+	//element at nMajorityIndex is our candidate
+	//Now do a second pass and check
+	nCount = 0;
+	for (size_t i = 0; i < nSize; i++) {
+		if (vecList[nMajorityIndex] == vecList[i])
+			nCount++;
+
+		if (nCount > nSize / 2)
+			return vecList[nMajorityIndex];
+	}
+
+	return -1;
+}
+
 template <class T> T MajorityElementDivideAndConquer(std::vector<T>& vecList, int nLow, int nHigh) {
 
 	if (nLow > nHigh) {
@@ -125,7 +173,8 @@ int main(int /*nArgv*/, char** /*pArgc*/) {
 	}
 
 	//int nMajorityElement = MajorityElementNaive(vecList);
-	int nMajorityElement = MajorityElementDivideAndConquer(vecList, 0, nNumberOfElements - 1);
+	//int nMajorityElement = MajorityElementDivideAndConquer(vecList, 0, nNumberOfElements - 1);
+	int nMajorityElement = MajorityElementMooresVotingAlgorithm(vecList);
 	if (nMajorityElement > 0)
 		std::cout << 1;
 	else

@@ -69,6 +69,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MajorityElement", "Algorith
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inversions", "Algorithmic Toolbox\Week4\Inversions\Inversions.vcxproj", "{91DDE319-D1CD-4CC7-B001-A169DB5F07B2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lottery", "Algorithmic Toolbox\Week4\Lottery\Lottery.vcxproj", "{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -301,6 +303,14 @@ Global
 		{91DDE319-D1CD-4CC7-B001-A169DB5F07B2}.Release|x64.Build.0 = Release|x64
 		{91DDE319-D1CD-4CC7-B001-A169DB5F07B2}.Release|x86.ActiveCfg = Release|Win32
 		{91DDE319-D1CD-4CC7-B001-A169DB5F07B2}.Release|x86.Build.0 = Release|Win32
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Debug|x64.ActiveCfg = Debug|x64
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Debug|x64.Build.0 = Debug|x64
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Debug|x86.ActiveCfg = Debug|Win32
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Debug|x86.Build.0 = Debug|Win32
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Release|x64.ActiveCfg = Release|x64
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Release|x64.Build.0 = Release|x64
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Release|x86.ActiveCfg = Release|Win32
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -338,6 +348,7 @@ Global
 		{04BF6AB3-6D38-4FD8-99A3-C3DDF262233D} = {5A72BC42-0D9B-4B82-9F55-F32FF2C3989B}
 		{B0BC7712-FF7F-4601-8FBA-2043272896E7} = {5A72BC42-0D9B-4B82-9F55-F32FF2C3989B}
 		{91DDE319-D1CD-4CC7-B001-A169DB5F07B2} = {5A72BC42-0D9B-4B82-9F55-F32FF2C3989B}
+		{33FE7C93-B7F9-4819-AE79-BC5AF8CA2D57} = {5A72BC42-0D9B-4B82-9F55-F32FF2C3989B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

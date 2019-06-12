@@ -73,20 +73,29 @@ template <class T>
 void RandomizedQuickSort(std::vector< std::pair<T, int>>& vecPointsAndSegments,
 						 int nLeft, 
 						 int nRight) {
-	if (nLeft >= nRight) {
+	/*if (nLeft >= nRight) {
 		return;
 	}
+*/
+	//std::random_device oRandomDevice;
+	//std::mt19937 oRng( oRandomDevice());
+	//std::uniform_int_distribution<T> oDist(nLeft, nRight);
+	//int nRandomNumber = oDist(oRng);
 
-	std::random_device oRandomDevice;
-	std::mt19937 oRng( oRandomDevice());
-	std::uniform_int_distribution<T> oDist(nLeft, nRight);
-	int nRandomNumber = oDist(oRng);
+	////swap the elements at nRandomNumber and nLeft
+	//std::swap(vecPointsAndSegments[nRandomNumber], vecPointsAndSegments[nLeft]);
 
-	//swap the elements at nRandomNumber and nLeft
-	std::swap(vecPointsAndSegments[nRandomNumber], vecPointsAndSegments[nLeft]);
-	int nPartition = Partition(vecPointsAndSegments, nLeft, nRight);
-	RandomizedQuickSort(vecPointsAndSegments, nLeft, nPartition - 1);
-	RandomizedQuickSort(vecPointsAndSegments, nPartition + 1, nRight);
+	while( nLeft < nRight){
+		int nPartition = Partition(vecPointsAndSegments, nLeft, nRight);
+		if( nPartition - nLeft < nRight - nPartition) {
+			RandomizedQuickSort(vecPointsAndSegments, nLeft, nPartition - 1);
+			nLeft = nPartition + 1;
+		}
+		else {
+			RandomizedQuickSort(vecPointsAndSegments, nPartition + 1, nRight);
+			nRight = nPartition + 1;
+		}
+	}
 }
 
 template <class T>

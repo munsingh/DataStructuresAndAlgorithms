@@ -51,9 +51,9 @@ int GetEditDistance(std::string& strRow, std::string& strColumn) {
 			int nMatch = vecTables[nRow - 1][nColumn - 1];
 			int nMismatch = vecTables[nRow - 1][nColumn - 1] + 1;
 
-			if (strRow[nRow] == strColumn[nColumn]) {
+			if (strRow[nRow - 1] == strColumn[nColumn - 1]) {
 				//match
-				vecTables[nRow][nColumn] = std::min({ nInsertion, nDeletion, nMatch });
+				vecTables[nRow][nColumn] = nMatch;
 			}
 			else {
 				vecTables[nRow][nColumn] = std::min({ nInsertion, nDeletion, nMismatch });
@@ -67,7 +67,8 @@ int GetEditDistance(std::string& strRow, std::string& strColumn) {
 int main(int /*nArgv*/, char** /*pArgc*/) {
 	//read two strings whose edit distance needs to be found
 	std::string strRow, strColumn;
-	std::cin >> strRow >> strColumn;
+	std::cin >> strRow;
+	std::cin >> strColumn;
 
 	std::cout << GetEditDistance(strRow, strColumn);
 	return 0;

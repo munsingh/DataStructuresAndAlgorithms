@@ -77,6 +77,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoinChange", "Algorithmic T
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EditDistance", "Algorithmic Toolbox\Week5\EditDistance\EditDistance.vcxproj", "{DD6E445B-81C0-4AAB-9F7D-BF73DF441613}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS2Strings", "Algorithmic Toolbox\Week5\LCS2Strings\LCS2Strings.vcxproj", "{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -333,6 +335,14 @@ Global
 		{DD6E445B-81C0-4AAB-9F7D-BF73DF441613}.Release|x64.Build.0 = Release|x64
 		{DD6E445B-81C0-4AAB-9F7D-BF73DF441613}.Release|x86.ActiveCfg = Release|Win32
 		{DD6E445B-81C0-4AAB-9F7D-BF73DF441613}.Release|x86.Build.0 = Release|Win32
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Debug|x64.ActiveCfg = Debug|x64
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Debug|x64.Build.0 = Debug|x64
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Debug|x86.ActiveCfg = Debug|Win32
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Debug|x86.Build.0 = Debug|Win32
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x64.ActiveCfg = Release|x64
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x64.Build.0 = Release|x64
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x86.ActiveCfg = Release|Win32
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -374,6 +384,7 @@ Global
 		{23B7740B-0FE3-4821-A92D-E2817F28ED2E} = {21672AA3-B4FE-4128-9198-C6D08846B30E}
 		{B2CA14C7-67A9-4562-81C2-4E40FAE06A04} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
 		{DD6E445B-81C0-4AAB-9F7D-BF73DF441613} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
+		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

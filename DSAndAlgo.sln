@@ -79,6 +79,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EditDistance", "Algorithmic
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS2Strings", "Algorithmic Toolbox\Week5\LCS2Strings\LCS2Strings.vcxproj", "{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LCS3Strings", "Algorithmic Toolbox\Week5\LCS3Strings\LCS3Strings.vcxproj", "{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -343,6 +345,14 @@ Global
 		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x64.Build.0 = Release|x64
 		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x86.ActiveCfg = Release|Win32
 		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D}.Release|x86.Build.0 = Release|Win32
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Debug|x64.ActiveCfg = Debug|x64
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Debug|x64.Build.0 = Debug|x64
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Debug|x86.ActiveCfg = Debug|Win32
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Debug|x86.Build.0 = Debug|Win32
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Release|x64.ActiveCfg = Release|x64
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Release|x64.Build.0 = Release|x64
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Release|x86.ActiveCfg = Release|Win32
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -385,6 +395,7 @@ Global
 		{B2CA14C7-67A9-4562-81C2-4E40FAE06A04} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
 		{DD6E445B-81C0-4AAB-9F7D-BF73DF441613} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
 		{F85B79CA-AEBA-477F-958F-C09FCB0CBC5D} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
+		{0312D962-BC8D-4EF3-96D0-0E7AEA98CE80} = {23B7740B-0FE3-4821-A92D-E2817F28ED2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

@@ -192,14 +192,16 @@ double get_optimal_value(int nCapacity, List<Item>& oList) {
 		}
 		else {
 			//take what you can
-			//So if capacity is for example 12 and the weight of item is 20 then take the capacity equivalent of weight
+			//So if capacity is for example 12 and the weight of item is 20 
+			//then take the capacity equivalent of weight
 			//in this case Value = Weight taken * PerUnitValue
 			//Update the item with reamaning weight and value
 			
 			dValue += nCapacity * pHead->GetData().GetPerUnitValue();
 			
 			pHead->GetData().SetWeight(nWeight - nCapacity);
-			pHead->GetData().SetValue(pHead->GetData().GetPerUnitValue() * (nWeight - nCapacity));
+			pHead->GetData().SetValue(pHead->GetData().GetPerUnitValue() * 
+									 (nWeight - nCapacity));
 
 			nCapacity = 0;
 		}
@@ -208,6 +210,10 @@ double get_optimal_value(int nCapacity, List<Item>& oList) {
 	return dValue;
 }
 
+/*
+  We store the items in descending order of value per unit.
+  For this we are using a custom List class
+ */
 int main() {
 	int nNumberOfItems = 0;	//Number of itms
 	int nCapacity = 0;		//Capacity of the knapsack

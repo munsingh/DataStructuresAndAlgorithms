@@ -7,27 +7,15 @@ int main(int argc, char** pArgv) {
 	cin >> nNumberOfInputs;
 
 	while (nNumberOfInputs--) {
-		int nSize(0);
-		cin >> nSize;
+		int nSize(0), nSubArraySize(0);
+		cin >> nSize >> nSubArraySize;
 
 		int* pArray = new int[nSize];
 		for (int i = 0; i < nSize; ++i) {
 			cin >> pArray[i];
 		}
 
-		int j = 0;
-		for (int i = 0; i < nSize; ++i) {
-			if (pArray[i] % 2 != 0) {
-				//odd, so insert it
-				pArray[j++] = pArray[i];
-			}
-		}
-
-		pArray[j] = '\0';
-
-		for (int i = 0; i < j; ++i) {
-			cout << pArray[i] << " ";
-		}
+		
 
 		delete[] pArray;
 		pArray = nullptr;

@@ -107,6 +107,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArrayOfProducts", "DS\Array
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindMinInArray", "DS\Arrays\FindMinInArray\FindMinInArray.vcxproj", "{EC1CF426-72A3-43C3-9359-069282479047}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FirstUniqueInArray", "DS\Arrays\FirstUniqueInArray\FirstUniqueInArray.vcxproj", "{3D892984-5535-443E-A9EF-0C7AF419A3B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -459,6 +461,14 @@ Global
 		{EC1CF426-72A3-43C3-9359-069282479047}.Release|x64.Build.0 = Release|x64
 		{EC1CF426-72A3-43C3-9359-069282479047}.Release|x86.ActiveCfg = Release|Win32
 		{EC1CF426-72A3-43C3-9359-069282479047}.Release|x86.Build.0 = Release|Win32
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Debug|x64.ActiveCfg = Debug|x64
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Debug|x64.Build.0 = Debug|x64
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Debug|x86.Build.0 = Debug|Win32
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Release|x64.ActiveCfg = Release|x64
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Release|x64.Build.0 = Release|x64
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Release|x86.ActiveCfg = Release|Win32
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -514,6 +524,7 @@ Global
 		{02EA29BA-1861-4ACA-B56D-EFF9A3C73361} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 		{E30B3DD9-DA24-46CD-AFDB-527D18E637E4} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 		{EC1CF426-72A3-43C3-9359-069282479047} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
+		{3D892984-5535-443E-A9EF-0C7AF419A3B8} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

@@ -99,6 +99,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReverseArray", "DS\Arrays\R
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReverseArrayInGroups", "DS\Arrays\ReverseArrayInGroups\ReverseArrayInGroups.vcxproj", "{786B694A-FFEA-479F-9F56-0DE7EE86673B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeTwoSortedArrays", "DS\Arrays\MergeTwoSortedArrays\MergeTwoSortedArrays.vcxproj", "{3F3AD37D-2338-4FF7-9590-090E098BD853}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -419,6 +421,14 @@ Global
 		{786B694A-FFEA-479F-9F56-0DE7EE86673B}.Release|x64.Build.0 = Release|x64
 		{786B694A-FFEA-479F-9F56-0DE7EE86673B}.Release|x86.ActiveCfg = Release|Win32
 		{786B694A-FFEA-479F-9F56-0DE7EE86673B}.Release|x86.Build.0 = Release|Win32
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Debug|x64.ActiveCfg = Debug|x64
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Debug|x64.Build.0 = Debug|x64
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Debug|x86.ActiveCfg = Debug|Win32
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Debug|x86.Build.0 = Debug|Win32
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Release|x64.ActiveCfg = Release|x64
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Release|x64.Build.0 = Release|x64
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Release|x86.ActiveCfg = Release|Win32
+		{3F3AD37D-2338-4FF7-9590-090E098BD853}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -470,6 +480,7 @@ Global
 		{5781E618-9FFD-456B-897D-9A25D6C592D6} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 		{D288F81D-44D4-4801-95B9-4012253C1D62} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 		{786B694A-FFEA-479F-9F56-0DE7EE86673B} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
+		{3F3AD37D-2338-4FF7-9590-090E098BD853} = {747094ED-B399-4E40-9F2C-1F0E863AF2EB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {412B26DA-2678-42AB-8CEF-46FAA4A21408}

@@ -14,7 +14,18 @@ int main(int argc, char** pArgv) {
 			cin >> pArray[i];
 		}
 
-		for (int i = nSize - 1; i >= 0; --i) {
+		//To reverse an array we need to start two pointers and swap them.
+		//The two pointers will be front and last
+		int nFirst(0), nLast(nSize - 1);
+
+		while (true) {
+			if (nFirst >= nLast)
+				break;
+
+			std::swap(pArray[nFirst++], pArray[nLast--]);
+		}
+
+		for (int i = 0; i < nSize; ++i) {
 			cout << pArray[i] << " ";
 		}
 

@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ProductOfArrayElements.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PrintSmallerAndLargerElements.cpp">
+    <ClCompile Include="FindIndex.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

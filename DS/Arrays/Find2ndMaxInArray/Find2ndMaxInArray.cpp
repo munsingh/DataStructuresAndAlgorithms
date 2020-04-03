@@ -21,19 +21,19 @@ int main(int nArgc, char** pArgv) {
 
 		//First find the max in the array
 		int nMax = INT_MIN;
+		int n2ndMax = INT_MIN;
 
 		for (int i = 0; i < nSize; ++i) {
 			if (pArray[i] > nMax) {
+				n2ndMax = nMax;
 				nMax = pArray[i];
 			}
-		}
-
-		//found the max, now we have to find an element, which is max 
-		//but less than the existing max
-		int n2ndMax = INT_MIN;
-		for (int i = 0; i < nSize; ++i) {
-			if (pArray[i] > n2ndMax && pArray[i] < nMax)
+			else if (pArray[i] > n2ndMax) {
 				n2ndMax = pArray[i];
+			}
+			else {
+				;//do nothing
+			}
 		}
 
 		cout << n2ndMax << endl;
